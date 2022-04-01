@@ -1,0 +1,25 @@
+@import "variables";
+@import "null";
+
+body {
+  color: $whiteColor;
+  font-size: $fontsize;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: $maxWidthContainer + px;
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+}
+
+.page {
+  flex: 1 1 auto;
+}
