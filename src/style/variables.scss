@@ -2,7 +2,7 @@ $fontfamily: "Open Sans";       //default font
 $fontsize: 14px;       //default font
 $minwidth: 320px;               //minimum width - iphone 5
 $maxwidth: 1920;                //maximum layout canvas width
-$maxWidthContainer: 1440;       //maximum content block width
+$maxWidthContainer: 1470;       //maximum content block width
 $md1: $maxWidthContainer + 12;  //first breakpoint
 $md2: 991.98;                   //second breakpoint
 $md3: 767.98;                   //third breakpoint
@@ -16,4 +16,7 @@ $dgr5_d: #3D444E;
 $dgr6_d: #50555D;
 $dgr7_d: #50555D;
 $dgr8_d: rgba(124, 128, 134, 0.15);
-$whiteColor: #FFFFFF;
+$colorTitle: #FFFFFF;
+
+$lgr1_d: #B6B4C6;
+$lpu6_d: #8F7FFF;

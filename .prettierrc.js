@@ -5,5 +5,6 @@ module.exports = {
     singleQuote: true,
     quoteProps: 'as-needed',
     arrowParens: 'always',
+    printWidth: 100,
     // '[javascript]': { 'editor.formatOnSave': true },
 }

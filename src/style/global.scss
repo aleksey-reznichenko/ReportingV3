@@ -2,8 +2,9 @@
 @import "null";
 
 body {
-  color: $whiteColor;
+  color: $colorTitle;
   font-size: $fontsize;
+  background-color: #000;
 }
 
 .wrapper {
@@ -15,9 +16,14 @@ body {
 }
 
 .container {
-  width: $maxWidthContainer + px;
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
+  padding: 0 15px;
+  &__item {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .page {
