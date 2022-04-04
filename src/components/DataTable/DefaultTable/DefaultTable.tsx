@@ -1,17 +1,12 @@
 import React, { useLayoutEffect } from 'react'
-import { DataTypes } from '../types/apiTypes'
+import { DevsTypeAndCategoriesType } from '../../../types/apiTypes'
 import { useTable } from 'react-table'
-import './DefaultTable.scss'
 
-interface IDataTableProps {
-    data: DataTypes
-    type: string
-}
 interface IColumnDetails {
     [key: string]: string
 }
 
-const DataTable: React.FC<IDataTableProps> = (props) => {
+export const DefaultTable: React.FC<{ data: DevsTypeAndCategoriesType }> = (props) => {
     const dataHandler = (data: Array<Array<string | number>>): IColumnDetails[] => {
         const result: IColumnDetails[] = []
         for (const rowItem of data) {
@@ -137,5 +132,3 @@ const DataTable: React.FC<IDataTableProps> = (props) => {
         </div>
     )
 }
-
-export default DataTable

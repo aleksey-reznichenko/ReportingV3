@@ -4,4 +4,15 @@ export type DevsTypeAndCategoriesType = {
     columnData: Array<Array<string | number>>
 }
 
-export type DataTypes = DevsTypeAndCategoriesType
+export type EfficiencyType = {
+    title: string
+    columnTitle: string[]
+    columnData: Array<object>
+}
+
+export enum TypeTable {
+    DEFAULT = 'DEFAULT',
+    EFFICIENCY = 'EFFICIENCY',
+}
+
+export type DataTypes = DevsTypeAndCategoriesType | EfficiencyType
