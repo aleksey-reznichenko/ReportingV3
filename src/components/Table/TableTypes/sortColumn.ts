@@ -11,12 +11,11 @@ interface ISortColumn<T> {
 const sortColumn: ISortColumn<ISortColumnString | ISortColumnObject> = (rowA, rowB, columnId) => {
   let a
   let b
-  // @ts-ignore
-  if ('billable' in rowA.original[columnId] && 'billable' in rowB.original[columnId]) {
+  if (typeof rowA.original[columnId] === 'string' && typeof rowB.original[columnId] === 'string') {
     // @ts-ignore
-    a = rowA.original[columnId]?.billable
+    a = rowA.original[columnId].toLowerCase()
     // @ts-ignore
-    b = rowB.original[columnId]?.billable
+    b = rowB.original[columnId].toLowerCase()
   } else if (Array.isArray(rowA.original[columnId]) && Array.isArray(rowB.original[columnId])) {
     // @ts-ignore
     a = rowA.original[columnId]?.join(', ').toLowerCase()
@@ -24,9 +23,9 @@ const sortColumn: ISortColumn<ISortColumnString | ISortColumnObject> = (rowA, ro
     b = rowB.original[columnId]?.join(', ').toLowerCase()
   } else {
     // @ts-ignore
-    a = rowA.original[columnId]?.toLowerCase()
+    a = rowA.original[columnId]?.billable
     // @ts-ignore
-    b = rowB.original[columnId]?.toLowerCase()
+    b = rowB.original[columnId]?.billable
   }
   if (a > b) return 1
   if (b > a) return -1
