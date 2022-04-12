@@ -1,0 +1,17 @@
+@import "./TableVariables";
+
+.HorizontalScroll {
+  padding-bottom: 30px;
+  margin-bottom: 4px;
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $dgr5_d;
+    border-radius: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $lpu6_d;
+    border-radius: 7px;
+  }
+}

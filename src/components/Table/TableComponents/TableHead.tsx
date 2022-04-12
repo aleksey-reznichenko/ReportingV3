@@ -18,7 +18,7 @@ const TableHead: React.FC<ITableHead> = ({ headerGroups, hasSorting }) => {
               key={columnIndex}
             >
               {column.render('Header')}
-              {hasSorting && <TableSortIcon column={column} />}
+              {hasSorting && !column.disableSortBy && <TableSortIcon column={column} />}
             </th>
           ))}
         </tr>

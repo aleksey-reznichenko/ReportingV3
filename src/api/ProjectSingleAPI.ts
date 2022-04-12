@@ -1,6 +1,6 @@
-import { ProjectSingle } from '../types/apiTypes'
+import { ProjectSingle } from '../components/Table/TableTypes/typesAPI'
 
-const projectSingle: ProjectSingle = [
+const projectSingleAPI: ProjectSingle = [
   {
     taskName: 'Search page mockup',
     developer: [
@@ -125,4 +125,4 @@ const projectSingle: ProjectSingle = [
   },
 ]
 
-export { projectSingle }
+export { projectSingleAPI }

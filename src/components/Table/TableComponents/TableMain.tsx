@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { Column, useSortBy, useTable } from 'react-table'
 import TableHead from './TableHead'
 import TableBody from './TableBody'
 import TableFoot from './TableFoot'
-import { ConfigTypes } from '../../../types/apiTypes'
+import { ConfigTypes } from '../TableTypes/typesAPI'
+// @ts-ignore
+import styles from '../TableStyles/ui.module.scss'
 
 interface IDataTableProps<T> {
   data: T
@@ -24,8 +26,18 @@ const TableMain: React.FC<IDataTableProps<any>> = ({ data, columns, config, clas
     )
   // pagination's (start, end)
   const pageRows = rows.slice(0, rows.length)
+  // horizontal scroll line
+  const tableRef = React.useRef<HTMLTableElement>(null)
+  useLayoutEffect(() => {
+    // @ts-ignore
+    if (tableRef?.current?.scrollWidth > tableRef?.current?.clientWidth) {
+      tableRef?.current?.classList.add(styles.HorizontalScroll)
+    } else {
+      tableRef?.current?.classList.remove(styles.HorizontalScroll)
+    }
+  })
   return (
-    <table {...getTableProps()} className={className}>
+    <table ref={tableRef} {...getTableProps()} className={className}>
       <TableHead headerGroups={headerGroups} hasSorting={config?.hasSorting} />
       <TableBody getTableBodyProps={getTableBodyProps} rows={pageRows} prepareRow={prepareRow} />
       <TableFoot footerGroups={footerGroups} />
