@@ -1,6 +1,6 @@
-import { ProjectDataTable } from '../components/Table/TableTypes/typesAPI'
+import { ProjectDataTable } from '../components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
 
-const projectDataTableLeadAPI: ProjectDataTable = [
+export const projectDataTableLeadAPI: ProjectDataTable[] = [
   {
     projectName: { name: 'AC Reporter', billable: true },
     tag: ['Guru', 'Page Mockup'],
@@ -132,7 +132,7 @@ const projectDataTableLeadAPI: ProjectDataTable = [
     efficiencyByPeriod: '100%',
   },
 ]
-const projectDataTableDevAPI: ProjectDataTable = [
+export const projectDataTableDevAPI: ProjectDataTable[] = [
   {
     projectName: { name: 'AC Reporter', billable: true },
     team: [
@@ -260,5 +260,3 @@ const projectDataTableDevAPI: ProjectDataTable = [
     efficiencyByPeriod: '100%',
   },
 ]
-
-export { projectDataTableLeadAPI, projectDataTableDevAPI }

@@ -1,0 +1,1 @@
+export { TableTag } from './TableTag'

@@ -1,6 +1,6 @@
-import { SimpleTableType } from '../components/Table/TableTypes/typesAPI'
+import { SimpleTableType } from '../components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
 
-const categoriesOneDev: SimpleTableType = [
+export const categoriesOneDev: SimpleTableType[] = [
   {
     Categories: 'CMS Production (B)',
     'Time (h)': 45.83,
@@ -43,7 +43,7 @@ const categoriesOneDev: SimpleTableType = [
   },
 ]
 
-const categoriesThreeDevs: SimpleTableType = [
+export const categoriesThreeDevs: SimpleTableType[] = [
   {
     Categories: 'CMS Production (B)',
     'Dianne Russell': 45.83,
@@ -106,7 +106,7 @@ const categoriesThreeDevs: SimpleTableType = [
   },
 ]
 
-const categoriesMoreDevs: SimpleTableType = [
+export const categoriesMoreDevs: SimpleTableType[] = [
   {
     Categories: 'CMS Production (B)',
     'All people': 45.83,
@@ -228,5 +228,3 @@ const categoriesMoreDevs: SimpleTableType = [
     'Lesly Priston': 45.83,
   },
 ]
-
-export { categoriesOneDev, categoriesThreeDevs, categoriesMoreDevs }

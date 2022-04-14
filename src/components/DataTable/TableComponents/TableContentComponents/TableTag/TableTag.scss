@@ -1,0 +1,13 @@
+@import '../../../TableStyles/variables';
+
+.table__tag {
+  display: inline-block;
+  border: 1px solid $lpu5_d;
+  border-radius: 15px;
+  padding: 3px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

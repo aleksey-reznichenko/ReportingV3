@@ -1,0 +1,1 @@
+export { TableSortIcon } from './TableSortIcon'

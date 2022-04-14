@@ -1,0 +1,15 @@
+@import '../../../TableStyles/variables';
+
+.table__show-more-text {
+  display: block;
+}
+
+.table__show-more-btn {
+  display: inline-block;
+  cursor: pointer;
+  color: $lpu6_d;
+  transition: color 0.3s;
+  &:hover {
+    color: $lpu8_d;
+  }
+}

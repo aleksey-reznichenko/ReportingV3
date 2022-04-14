@@ -1,0 +1,61 @@
+@import "variables";
+
+.container-table {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  padding: 39px 39px 36px;
+  background-color: $dgr3_d;
+  border: 1px solid $dgr5_d;
+  border-radius: 7px;
+  width: 100%;
+  max-width: 1320px;
+  overflow: hidden;
+  td, th {
+    min-width: 100px;
+    max-width: 100px;
+    &:first-child {
+      min-width: 145px;
+      max-width: 145px;
+    }
+  }
+  &__small {
+    max-width: 425px;
+    td, th {
+      min-width: 105px;
+      max-width: 110px;
+    }
+  }
+  &__medium {
+    max-width: 648px;
+    td, th {
+      min-width: 105px;
+      max-width: 110px;
+    }
+  }
+  &__title {
+    color: $colorTitle;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+
+.table__horizontal-scroll {
+  padding-bottom: 30px;
+  margin-bottom: 4px;
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $dgr5_d;
+    border-radius: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $lpu6_d;
+    border-radius: 7px;
+  }
+}

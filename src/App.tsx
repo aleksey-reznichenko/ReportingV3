@@ -1,18 +1,21 @@
 import React from 'react'
 import './style/global.scss'
 import SwitchTheme from './components/theme/SwitchTheme'
-import { TypeTable } from './components/Table/TableTypes/typesAPI'
-import DataTable from './components/Table/DataTable'
-import { projectSingleAPI } from './api/ProjectSingleAPI'
-import { projectDataTableDevAPI, projectDataTableLeadAPI } from './api/ProjectDataTableAPI'
+import { DataTable } from './components/DataTable'
+import { TypeTable } from './components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
 import {
   categoriesMoreDevs,
   categoriesOneDev,
   categoriesThreeDevs,
-} from './api/ProjectsCategoriesAPI'
-import { moreDevs, oneDev, threeDevs } from './api/ProjectJobAPI'
+  moreDevs,
+  oneDev,
+  projectDataTableDevAPI,
+  projectDataTableLeadAPI,
+  projectSingleAPI,
+  threeDevs,
+} from './api'
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <div className="wrapper">
       <div className="page">
@@ -84,5 +87,3 @@ const App: React.FC = () => {
     </div>
   )
 }
-
-export default App

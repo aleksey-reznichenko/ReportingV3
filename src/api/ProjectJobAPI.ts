@@ -1,6 +1,6 @@
-import { SimpleTableType } from '../components/Table/TableTypes/typesAPI'
+import { SimpleTableType } from '../components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
 
-const oneDev: SimpleTableType = [
+export const oneDev: SimpleTableType[] = [
   {
     'Job types': 'Programming',
     'Time (h)': 45.83,
@@ -47,7 +47,7 @@ const oneDev: SimpleTableType = [
   },
 ]
 
-const threeDevs: SimpleTableType = [
+export const threeDevs: SimpleTableType[] = [
   {
     'Job types': 'Programming',
     'Dianne Russell': 45.83,
@@ -116,7 +116,7 @@ const threeDevs: SimpleTableType = [
   },
 ]
 
-const moreDevs: SimpleTableType = [
+export const moreDevs: SimpleTableType[] = [
   {
     'Job types': 'Programming',
     'All people': 45.83,
@@ -250,5 +250,3 @@ const moreDevs: SimpleTableType = [
     'Lesly Priston': 45.83,
   },
 ]
-
-export { oneDev, threeDevs, moreDevs }

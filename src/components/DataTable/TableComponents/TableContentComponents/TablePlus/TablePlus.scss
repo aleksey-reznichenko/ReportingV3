@@ -1,0 +1,9 @@
+@import '../../../TableStyles/variables';
+
+.table__btn-add-column {
+  width: 40px;
+  height: 40px;
+  background: $lpu10_d url("../../../image/plus.svg") center no-repeat;
+  border-radius: 7px;
+  cursor: pointer;
+}

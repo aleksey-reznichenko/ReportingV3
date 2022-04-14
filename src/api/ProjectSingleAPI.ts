@@ -1,6 +1,6 @@
-import { ProjectSingle } from '../components/Table/TableTypes/typesAPI'
+import { ProjectSingle } from '../components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
 
-const projectSingleAPI: ProjectSingle = [
+export const projectSingleAPI: ProjectSingle[] = [
   {
     taskName: 'Search page mockup',
     developer: [
@@ -124,5 +124,3 @@ const projectSingleAPI: ProjectSingle = [
     efficiency: '100%',
   },
 ]
-
-export { projectSingleAPI }
