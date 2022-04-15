@@ -1,4 +1,4 @@
-import { SimpleTableType } from '../components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
+import { SimpleTableType } from '../components/DataTable/TableTypes/TableServiceFunctions'
 
 export const oneDev: SimpleTableType[] = [
   {
@@ -250,3 +250,72 @@ export const moreDevs: SimpleTableType[] = [
     'Lesly Priston': 45.83,
   },
 ]
+
+// export const projectJobOneDev: EmployeeTable[] = [
+//   {
+//     'Job Types': [
+//       'Programming',
+//       'Markup',
+//       'Graphic Design',
+//       'Estimation',
+//       'Investigation',
+//       'Bug Fixing',
+//       'Content Writing',
+//       'Quality Assurance',
+//       'Meetings',
+//       'Other',
+//       'Total',
+//     ],
+//     employees: [
+//       {
+//         name: 'All people',
+//         'Job Types': [
+//           {
+//             typeName: 'Programming',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Markup',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Graphic Design',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Estimation',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Investigation',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Bug Fixing',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Content Writing',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Quality Assurance',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Meetings',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Other',
+//             hours: 45.83,
+//           },
+//           {
+//             typeName: 'Total',
+//             hours: 45.83,
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// ]

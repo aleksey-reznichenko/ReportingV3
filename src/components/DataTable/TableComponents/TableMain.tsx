@@ -1,10 +1,10 @@
 import React, { useLayoutEffect } from 'react'
 import { Column, useSortBy, useTable } from 'react-table'
-import { ConfigTypes } from '../TableTypes/TableServiceFunctions/typesAPI'
+import { ConfigTypes } from '../TableTypes/TableServiceFunctions'
 import { TableHead } from './TableHead'
 import { TableBody } from './TableBody'
 import { TableFoot } from './TableFoot'
-import '../TableStyles/ui.scss'
+import '../TableStyles/global.scss'
 
 interface DataTableProps<T extends object> {
   data: T[]

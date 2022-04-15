@@ -1,4 +1,4 @@
-import { SimpleTableType } from '../components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
+import { SimpleTableType } from '../components/DataTable/TableTypes/TableServiceFunctions'
 
 export const categoriesOneDev: SimpleTableType[] = [
   {

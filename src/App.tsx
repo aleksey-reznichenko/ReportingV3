@@ -1,8 +1,11 @@
 import React from 'react'
 import './style/global.scss'
-import SwitchTheme from './components/theme/SwitchTheme'
 import { DataTable } from './components/DataTable'
-import { TypeTable } from './components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
+import {
+  ProjectDataTable,
+  ProjectSingle,
+  SimpleTableType,
+} from './components/DataTable/TableTypes/TableServiceFunctions'
 import {
   categoriesMoreDevs,
   categoriesOneDev,
@@ -14,6 +17,12 @@ import {
   projectSingleAPI,
   threeDevs,
 } from './api'
+import {
+  getDefaultColumns,
+  getProjectDataColumnsDev,
+  getProjectDataColumnsLead,
+  getProjectSingleColumns,
+} from './components/DataTable/TableTypes/ColumnTypes'
 
 export const App: React.FC = () => {
   return (
@@ -21,64 +30,74 @@ export const App: React.FC = () => {
       <div className="page">
         <div className="container">
           <div className="container__item">
-            <SwitchTheme />
-          </div>
-          <div className="container__item">
-            <DataTable
+            <DataTable<SimpleTableType>
               data={categoriesOneDev}
-              type={TypeTable.DEFAULT}
-              config={{ title: 'By Project Categories' }}
+              columns={getDefaultColumns(categoriesOneDev)}
+              style={'table-default'}
+              config={{ title: 'By Project Categories', hasContainer: true }}
             />
           </div>
           <div className="container__item">
-            <DataTable
+            <DataTable<SimpleTableType>
               data={categoriesThreeDevs}
-              type={TypeTable.DEFAULT}
-              config={{ title: 'Hours By Project Categories' }}
+              columns={getDefaultColumns(categoriesThreeDevs)}
+              style={'table-default'}
+              config={{ title: 'Hours By Project Categories', hasContainer: true }}
             />
           </div>
           <div className="container__item">
-            <DataTable
+            <DataTable<SimpleTableType>
               data={categoriesMoreDevs}
-              type={TypeTable.DEFAULT}
-              config={{ title: 'Hours By Project Categories' }}
+              columns={getDefaultColumns(categoriesMoreDevs)}
+              style={'table-default'}
+              config={{ title: 'Hours By Project Categories', hasContainer: true }}
             />
           </div>
           <div className="container__item">
-            <DataTable data={oneDev} type={TypeTable.DEFAULT} config={{ title: 'By job types' }} />
+            <DataTable<SimpleTableType>
+              data={oneDev}
+              columns={getDefaultColumns(oneDev)}
+              style={'table-default'}
+              config={{ title: 'By job types', hasContainer: true }}
+            />
           </div>
           <div className="container__item">
-            <DataTable
+            <DataTable<SimpleTableType>
               data={threeDevs}
-              type={TypeTable.DEFAULT}
-              config={{ title: 'Hours by job types' }}
+              columns={getDefaultColumns(threeDevs)}
+              style={'table-default'}
+              config={{ title: 'Hours by job types', hasContainer: true }}
             />
           </div>
           <div className="container__item">
-            <DataTable
+            <DataTable<SimpleTableType>
               data={moreDevs}
-              type={TypeTable.DEFAULT}
-              config={{ title: 'Hours by job types' }}
+              columns={getDefaultColumns(moreDevs)}
+              style={'table-default'}
+              config={{ title: 'Hours by job types', hasContainer: true }}
             />
           </div>
           <div className="container__item">
-            <DataTable
+            <DataTable<ProjectSingle>
               data={projectSingleAPI}
-              type={TypeTable.PROJECTSINGLE}
+              columns={getProjectSingleColumns}
+              style={'big-table big-table--project-single'}
               config={{ hasSorting: true }}
             />
           </div>
           <div className="container__item">
-            <DataTable
+            <DataTable<ProjectDataTable>
               data={projectDataTableLeadAPI}
-              type={TypeTable.PROJECTDATA}
+              columns={getProjectDataColumnsLead}
+              style={'big-table big-table--project-table-lead'}
               config={{ hasSorting: true }}
             />
           </div>
           <div className="container__item">
-            <DataTable
+            <DataTable<ProjectDataTable>
               data={projectDataTableDevAPI}
-              type={TypeTable.PROJECTDATA}
+              columns={getProjectDataColumnsDev}
+              style={'big-table big-table--project-table-dev'}
               config={{ hasSorting: true }}
             />
           </div>

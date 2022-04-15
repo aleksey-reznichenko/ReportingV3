@@ -1,4 +1,4 @@
-import { ProjectDataTable } from '../components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
+import { ProjectDataTable } from '../components/DataTable/TableTypes/TableServiceFunctions'
 
 export const projectDataTableLeadAPI: ProjectDataTable[] = [
   {

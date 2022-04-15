@@ -1,15 +1,15 @@
 import React from 'react'
 import { Column } from 'react-table'
-import { ProjectSingle } from '../TableServiceFunctions/typesAPI'
-import { TableLink, TableShowMore, TableStatus } from '../../TableComponents/TableContentComponents'
 import {
+  ProjectSingle,
   sortColumn,
   accessorNumberView,
   footerReduceEfficiency,
   footerReduceSum,
 } from '../TableServiceFunctions'
+import { TableLink, TableShowMore, TableStatus } from '../../TableComponents/TableContentComponents'
 
-export const projectSingleColumns: Column<ProjectSingle>[] = [
+export const getProjectSingleColumns: Column<ProjectSingle>[] = [
   {
     Header: 'Task name',
     id: 'taskName',
@@ -68,7 +68,7 @@ export const projectSingleColumns: Column<ProjectSingle>[] = [
     accessor: ({ efficiency }) => (efficiency ? efficiency : '-'),
     Footer: ({ rows }) => {
       const result: number = footerReduceEfficiency(rows, 'efficiency')
-      const resultMyTime: number = footerReduceEfficiency(rows, 'efficiency')
+      const resultMyTime: number = footerReduceSum(rows, 'efficiency')
       return `${result || 0}% (${resultMyTime || 0}h)`
     },
   },

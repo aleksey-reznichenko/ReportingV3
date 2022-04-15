@@ -21,12 +21,8 @@ export interface ProjectDataTable {
   timeSpentByPeriod: number
   efficiencyByPeriod: string | null
 }
-export enum TypeTable {
-  DEFAULT = 'DEFAULT',
-  PROJECTSINGLE = 'PROJECTSINGLE',
-  PROJECTDATA = 'PROJECTDATA',
-}
 export type ConfigTypes = {
   title?: string
   hasSorting?: boolean
+  hasContainer?: boolean
 }

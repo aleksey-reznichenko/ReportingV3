@@ -1,4 +1,4 @@
-import { ProjectSingle } from '../components/DataTable/TableTypes/TableServiceFunctions/typesAPI'
+import { ProjectSingle } from '../components/DataTable/TableTypes/TableServiceFunctions'
 
 export const projectSingleAPI: ProjectSingle[] = [
   {
